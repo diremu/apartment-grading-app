@@ -8,4 +8,9 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
+  resolve: {
+    alias: {
+      '@': Path2D.resolve(__dirname, 'src'),
+    },
+  },
 })

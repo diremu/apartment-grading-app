@@ -1,4 +1,7 @@
 import Navbar from '../components/Navbar'
+import Apartments from '../components/apartments'
+import Houses from '../components/houses'
+
 export default function Landing() {
     return (
         <div className="bg-[#f9fafb] min-h-screen">
@@ -12,6 +15,8 @@ export default function Landing() {
                     </div>
                 </div>
             </div>
+            <Apartments />
+            <Houses />
         </div>
     )
 }
