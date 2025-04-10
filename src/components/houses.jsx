@@ -1,17 +1,15 @@
-import Card from "./card";
+import ShowcaseBelt from './showcaseBelt.jsx'
 import { Properties as houses } from "./properties.js";
 
 export default function Houses() {
     const houseList = houses.houses.slice(0,4);
-
+    console.log(houseList)
     return(
         <div>
-            <h2>Houses</h2>
-            <p>Our Highly Rated Houses</p>
+            <h2 className="text-3xl font-semibold">Houses</h2>
+            <p className="italic text-[16px]">Our Comfortable and Modern Houses</p>
             <div className="flex flex-wrap justify-center">
-                {houseList.map((house, index) => (
-                    <Card key={index} {...house} />
-                ))}
+                <ShowcaseBelt properties={houseList} />
             </div>
         </div>
     )
