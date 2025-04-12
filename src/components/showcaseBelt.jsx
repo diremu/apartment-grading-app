@@ -12,7 +12,8 @@ export default function ShowcaseBelt(properties) {
   return (
     <Carousel opts={{
         loop: true,
-        align: 'start'
+        align: 'start',
+        watchDrag: false
     }} className="w-[60%]">
       <CarouselContent>
         { propertiess.map((property, index) => (
