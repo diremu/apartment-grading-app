@@ -4,7 +4,7 @@ export const Properties = {
             "ratings": ["✯✯✯✯✯","✯✯✯","✯✯✯✯","✯✯✯✯"], "images": ["src/assets/images/apartment-1.jpg","src/assets/images/apartment-8.jpg"]
         },
         {"name":"Urban Loft", "address": "456 Downtown Avenue", "avgRating": "✯✯✯✯✯", "users": ["Sarah Miller","Emma Davis","Michael Johnson"],
-            "ratings": ["✯✯✯✯✯","✯✯✯✯✯","✯✯✯✯✯"], "images": ["src/assets/images/apartment-3.jpg","src/assets/images/apartment-4,jpg"]
+            "ratings": ["✯✯✯✯✯","✯✯✯✯✯","✯✯✯✯✯"], "images": ["src/assets/images/apartment-3.jpg","src/assets/images/apartment-4.jpg"]
         },
         {"name":"Parkside Studio", "address": "789 Green Park Road", "avgRating": "✯✯✯", "users": ["James Wilson","Olivia Martinez","Daniel Thompson"],
             "ratings": ["✯✯✯","✯✯✯✯","✯✯✯"], "images": ["src/assets/images/apartment-2.jpg","src/assets/images/apartment-5.jpg"]
