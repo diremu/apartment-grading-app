@@ -4,13 +4,13 @@ export const Properties = {
             "ratings": ["✯✯✯✯✯","✯✯✯","✯✯✯✯","✯✯✯✯"], "images": ["src/assets/images/apartment-1.jpg","src/assets/images/apartment-8.jpg"]
         },
         {"name":"Urban Loft", "address": "456 Downtown Avenue", "avgRating": "✯✯✯✯✯", "users": ["Sarah Miller","Emma Davis","Michael Johnson"],
-            "ratings": ["✯✯✯✯✯","✯✯✯✯✯","✯✯✯✯✯"], "images": ["src/assets/images/apartment-3.jpg"]
+            "ratings": ["✯✯✯✯✯","✯✯✯✯✯","✯✯✯✯✯"], "images": ["src/assets/images/apartment-3.jpg","src/assets/images/apartment-4.jpg"]
         },
         {"name":"Parkside Studio", "address": "789 Green Park Road", "avgRating": "✯✯✯", "users": ["James Wilson","Olivia Martinez","Daniel Thompson"],
-            "ratings": ["✯✯✯","✯✯✯✯","✯✯✯"], "images": ["src/assets/images/apartment-2.jpg"]
+            "ratings": ["✯✯✯","✯✯✯✯","✯✯✯"], "images": ["src/assets/images/apartment-2.jpg","src/assets/images/apartment-5.jpg"]
         },
         {"name":"Sunset View Apartment", "address": "101 Horizon Boulevard", "avgRating": "✯✯✯✯", "users": ["Emma Thompson","Robert Garcia","Sophia Lee","William Brown"],
-            "ratings": ["✯✯✯✯","✯✯✯✯","✯✯✯✯✯","✯✯✯"], "images": ["src/assets/images/apartment-4.jpg"]
+            "ratings": ["✯✯✯✯","✯✯✯✯","✯✯✯✯✯","✯✯✯"], "images": ["src/assets/images/apartment-6.jpg","src/assets/images/apartment-7.jpg"]
         }
     ],
     "condos": [
@@ -29,16 +29,16 @@ export const Properties = {
     ],
     "houses": [
         {"name":"Suburban Family Home", "address": "123 Maple Street", "avgRating": "✯✯✯✯", "users": ["Liam Johnson","Olivia Taylor","Noah Wilson"],
-            "ratings": ["✯✯✯✯","✯✯✯✯","✯✯✯✯"], "images": ["src/assets/images/apartment-5.jpg"]
+            "ratings": ["✯✯✯✯","✯✯✯✯","✯✯✯✯"], "images": ["src/assets/images/house-1.jpg","src/assets/images/house-2.jpg"]
         },
         {"name":"Country Farmhouse", "address": "456 Rural Route", "avgRating": "✯✯✯", "users": ["Olivia Smith","William Anderson","Emma Davis"],
-            "ratings": ["✯✯✯","✯✯✯","✯✯✯"], "images": ["src/assets/images/apartment-6.jpg"]
+            "ratings": ["✯✯✯","✯✯✯","✯✯✯"], "images": ["src/assets/images/house-3.jpg", "src/assets/images/house-4.jpg"]
         },
         {"name":"Modern Villa", "address": "789 Contemporary Lane", "avgRating": "✯✯✯✯✯", "users": ["Jackson Brown","Sophia Miller","Lucas Garcia","Harper Lewis"],
-            "ratings": ["✯✯✯✯✯","✯✯✯✯✯","✯✯✯✯","✯✯✯✯✯"], "images": ["src/assets/images/apartment-7.jpg"]
+            "ratings": ["✯✯✯✯✯","✯✯✯✯✯","✯✯✯✯","✯✯✯✯✯"], "images": ["src/assets/images/house-5.jpg","src/assets/images/house-6.jpg"]
         },
         {"name":"Victorian Classic", "address": "101 Heritage Drive", "avgRating": "✯✯✯✯", "users": ["Sophia Davis","Benjamin Thomas","Amelia Hall","Henry Clark"],
-            "ratings": ["✯✯✯✯","✯✯✯","✯✯✯✯✯","✯✯✯✯"], "images": ["src/assets/images/apartment-8.jpg"]
+            "ratings": ["✯✯✯✯","✯✯✯","✯✯✯✯✯","✯✯✯✯"], "images": ["src/assets/images/house-7.jpg","src/assets/images/house-8.jpg"]
         }
     ],
     "hotels": [
