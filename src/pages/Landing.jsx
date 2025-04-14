@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Apartments from "../components/apartments";
 import Houses from "../components/houses";
+import Reviews from "../components/reviews.jsx";
 
 export default function Landing() {
   return (
@@ -38,6 +39,7 @@ export default function Landing() {
         <Apartments />
         <Houses />
       </div>
+      <Reviews />
     </div>
   );
 }
