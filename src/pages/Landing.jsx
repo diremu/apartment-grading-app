@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Apartments from "../components/apartments";
 import Houses from "../components/houses";
 import Reviews from "../components/reviews.jsx";
+import Footer from "../components/Footer";
 
 export default function Landing() {
   return (
@@ -40,6 +41,7 @@ export default function Landing() {
         <Houses />
       </div>
       <Reviews />
+      <Footer />
     </div>
   );
 }
