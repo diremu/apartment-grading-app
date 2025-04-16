@@ -16,7 +16,7 @@ export default function ReviewBelt({ reviews }) {
     }} className="w-[80%]">
       <CarouselContent>
         {reviews.map((review, index) => (
-          <CarouselItem key={index} className="basis-1/2 md:basis-1/3">
+          <CarouselItem key={index} className="basis-full">
             <div>
               <ReviewCard review={review} />
             </div>

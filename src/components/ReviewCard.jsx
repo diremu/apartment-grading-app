@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ReviewCard({ review }) {
   return (
-    <div className="bg-white rounded-lg shadow-md border border-gray-200 m-4 w-80 selection:bg-transparent">
+    <div className="bg-white rounded-lg shadow-md border border-gray-200 m-4 w-full selection:bg-transparent">
       <div className="p-5">
         {/* Avatar circle with reviewer's initial */}
         <div className="mb-4 flex justify-center">

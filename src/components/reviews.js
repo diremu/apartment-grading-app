@@ -8,13 +8,13 @@ export const Reviews = [
     {
         'name': "Sarah Chen",
         'review': "Perfect space for a weekend getaway. The amenities were modern and everything was spotless",
-        'duration': "3 days",
+        'duration': "1 day",
         'location': "Modern Suite",
     },
     {
         'name': "Michael Brooks",
         'review': "Great value for money. The neighborhood is quiet and peaceful. Would recommend!",
-        'duration': "7 days",
+        'duration': "1 week",
         'location': "Quiet Haven",
     },
     {
@@ -26,7 +26,7 @@ export const Reviews = [
     {
         'name': "David Kim",
         'review': "Excellent location and fantastic amenities. The host was very responsive and helpful",
-        'duration': "6 days",
+        'duration': "3 weeks",
         'location': "City Center Apartment",
     },
     {

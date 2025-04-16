@@ -11,6 +11,18 @@ export const Properties = {
         },
         {"name":"Sunset View Apartment", "address": "101 Horizon Boulevard", "avgRating": "✯✯✯✯", "users": ["Emma Thompson","Robert Garcia","Sophia Lee","William Brown"],
             "ratings": ["✯✯✯✯","✯✯✯✯","✯✯✯✯✯","✯✯✯"], "images": ["src/assets/images/apartment-6.jpg","src/assets/images/apartment-7.jpg"]
+        },
+        {"name":"Modern Skyline Apartment", "address": "505 City View Drive", "avgRating": "✯✯✯✯", "users": ["Alexander Chen","Jessica Parker","David Rodriguez","Olivia Wang"],
+            "ratings": ["✯✯✯✯","✯✯✯✯✯","✯✯✯","✯✯✯✯"], "images": ["src/assets/images/apartment-9.jpg","src/assets/images/apartment-10.jpg"]
+        },
+        {"name":"Riverside Apartment", "address": "202 Waterfront Lane", "avgRating": "✯✯✯✯✯", "users": ["Madison Taylor","Brandon Clark","Ashley Kim"],
+            "ratings": ["✯✯✯✯✯","✯✯✯✯✯","✯✯✯✯"], "images": ["src/assets/images/apartment-11.jpg","src/assets/images/apartment-12.jpg"]
+        },
+        {"name":"Garden View Apartment", "address": "303 Botanical Street", "avgRating": "✯✯✯", "users": ["Ryan Martinez","Sophia Wilson","Jake Thomas","Ava Johnson"],
+            "ratings": ["✯✯✯","✯✯✯✯","✯✯","✯✯✯✯"], "images": ["src/assets/images/apartment-13.jpg","src/assets/images/apartment-14.jpg"]
+        },
+        {"name":"Downtown Studio", "address": "404 Metropolitan Avenue", "avgRating": "✯✯✯✯", "users": ["Ethan Brown","Zoe Anderson","Tyler Wright"],
+            "ratings": ["✯✯✯✯","✯✯✯✯✯","✯✯✯"], "images": ["src/assets/images/apartment-9.jpg","src/assets/images/apartment-2.jpg"]
         }
     ],
     "condos": [
@@ -39,6 +51,18 @@ export const Properties = {
         },
         {"name":"Victorian Classic", "address": "101 Heritage Drive", "avgRating": "✯✯✯✯", "users": ["Sophia Davis","Benjamin Thomas","Amelia Hall","Henry Clark"],
             "ratings": ["✯✯✯✯","✯✯✯","✯✯✯✯✯","✯✯✯✯"], "images": ["src/assets/images/house-7.jpg","src/assets/images/house-8.jpg"]
+        },
+        {"name":"Lakefront Residence", "address": "567 Shoreline Drive", "avgRating": "✯✯✯✯✯", "users": ["Natalie Harris","Dylan Martinez","Emma Thompson","Joshua Lee"],
+            "ratings": ["✯✯✯✯✯","✯✯✯✯✯","✯✯✯✯","✯✯✯✯✯"], "images": ["src/assets/images/house-9.jpg","src/assets/images/house-10.jpg"]
+        },
+        {"name":"Mountain Retreat", "address": "789 Alpine Way", "avgRating": "✯✯✯✯", "users": ["Aiden Miller","Isabella Garcia","Samuel Wilson"],
+            "ratings": ["✯✯✯✯✯","✯✯✯","✯✯✯✯"], "images": ["src/assets/images/house-11.jpg","src/assets/images/house-12.jpg"]
+        },
+        {"name":"Urban Townhouse", "address": "321 Metropolitan Lane", "avgRating": "✯✯✯", "users": ["Mia Johnson","Noah Taylor","Zoey Smith","Lucas Rodriguez"],
+            "ratings": ["✯✯✯","✯✯✯","✯✯","✯✯✯✯"], "images": ["src/assets/images/house-13.jpg","src/assets/images/house-14.jpg"]
+        },
+        {"name":"Garden Cottage", "address": "888 Flower Street", "avgRating": "✯✯✯✯", "users": ["Lily Davis","Mason Brown","Charlotte Lee"],
+            "ratings": ["✯✯✯✯","✯✯✯✯✯","✯✯✯"], "images": ["src/assets/images/house-3.jpg","src/assets/images/house-8.jpg"]
         }
     ],
     "hotels": [

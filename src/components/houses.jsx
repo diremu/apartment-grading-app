@@ -2,7 +2,7 @@ import ShowcaseBelt from './showcaseBelt.jsx'
 import { Properties as houses } from "./properties.js";
 
 export default function Houses() {
-    const houseList = houses.houses.slice(0,4);
+    const houseList = houses.houses
     console.log(houseList)
     return(
         <div>
