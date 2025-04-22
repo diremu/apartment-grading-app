@@ -6,7 +6,7 @@ export default function Houses() {
     console.log(houseList)
     return(
         <div>
-            <h2 className="text-3xl font-semibold bg-[url('src/assets/images/houses-title.jpg')] bg-cover bg-center py-10">Houses</h2>
+            <h2 className="text-3xl font-semibold bg-[url('/assets/images/houses-title.jpg')] bg-cover bg-center py-10">Houses</h2>
             <p className="italic text-[16px]">Our Comfortable and Modern Houses</p>
             <div className="flex flex-wrap justify-center">
                 <ShowcaseBelt properties={houseList} />
