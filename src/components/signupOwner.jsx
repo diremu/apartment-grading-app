@@ -1,6 +1,50 @@
 import { Link } from 'react-router-dom'
+import {useState} from 'react'
 
 export default function SignupOwner() {
+
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [company, setCompany] = useState("")
+    const [password, setPassword] = useState("")
+    const [confirmPassword, setConfirmPassword] = useState("")
+    const [error, setError] = useState({name: "", email: "", password: "", confirmPassword: ""})
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        const newErrors = {
+            name: "",
+            email: "",
+            password: "",
+            confirmPassword: ""
+        };
+        if (name === "") {
+            newErrors.name = "Name is required";
+        }
+        
+        if (email === "") {
+            newErrors.email = "Email is required";
+        } else if (!/\S+@\S+\.\S+/.test(email)) {
+            newErrors.email = "Email is invalid";
+        }
+        
+        if (password === "") {
+            newErrors.password = "Password is required";
+        } else if (password.length < 8) {
+            newErrors.password = "Password must be at least 8 characters";
+        }
+
+        if (password !== confirmPassword) {
+            newErrors.confirmPassword = "Passwords do not match";
+        }
+        setError(newErrors);
+        const hasErrors = Object.values(newErrors).some(error => error !== "");
+        
+        if (!hasErrors) {
+            console.log("submitted");
+        }
+    }
+
     return (
         <div className="min-h-screen bg-[#f9fafb] flex flex-col">
             <div className="bg-[#4f46e5] text-white p-4">
@@ -12,15 +56,18 @@ export default function SignupOwner() {
                     <h2 className="text-3xl font-bold text-center mb-6">Property Owner Signup</h2>
                     <p className="text-gray-600 mb-6 text-center">Create an account to showcase your properties</p>
                     
-                    <form className="space-y-4">
+                    <form className="space-y-4" onSubmit={handleSubmit}>
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
                             <input 
                                 type="text" 
                                 id="name" 
-                                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#a5b4fc]" 
-                                placeholder="John Doe" 
+                                className={`w-full px-4 py-2 border ${error.name ? "border-red-500" : "border-gray-300"} rounded-md focus:outline-none focus:ring-2 focus:ring-[#a5b4fc]`}
+                                placeholder="John Doe"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
                             />
+                            {error.name && <p className="text-red-500 text-xs mt-1">{error.name}</p>}
                         </div>
                         
                         <div>
@@ -28,9 +75,12 @@ export default function SignupOwner() {
                             <input 
                                 type="email" 
                                 id="email" 
-                                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#a5b4fc]" 
-                                placeholder="john@example.com" 
+                                className={`w-full px-4 py-2 border ${error.email ? "border-red-500" : "border-gray-300"} rounded-md focus:outline-none focus:ring-2 focus:ring-[#a5b4fc]`}
+                                placeholder="john@example.com"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                             />
+                            {error.email && <p className="text-red-500 text-xs mt-1">{error.email}</p>}
                         </div>
                         
                         <div>
@@ -38,8 +88,10 @@ export default function SignupOwner() {
                             <input 
                                 type="text" 
                                 id="company" 
-                                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#a5b4fc]" 
-                                placeholder="Your Company" 
+                                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#a5b4fc]"
+                                placeholder="Your Company"
+                                value={company}
+                                onChange={(e) => setCompany(e.target.value)}
                             />
                         </div>
                         
@@ -48,9 +100,12 @@ export default function SignupOwner() {
                             <input 
                                 type="password" 
                                 id="password" 
-                                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#a5b4fc]" 
-                                placeholder="••••••••" 
+                                className={`w-full px-4 py-2 border ${error.password ? "border-red-500" : "border-gray-300"} rounded-md focus:outline-none focus:ring-2 focus:ring-[#a5b4fc]`}
+                                placeholder="••••••••"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
                             />
+                            {error.password && <p className="text-red-500 text-xs mt-1">{error.password}</p>}
                         </div>
                         
                         <div>
@@ -58,9 +113,12 @@ export default function SignupOwner() {
                             <input 
                                 type="password" 
                                 id="confirmPassword" 
-                                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#a5b4fc]" 
-                                placeholder="••••••••" 
+                                className={`w-full px-4 py-2 border ${error.confirmPassword ? "border-red-500" : "border-gray-300"} rounded-md focus:outline-none focus:ring-2 focus:ring-[#a5b4fc]`}
+                                placeholder="••••••••"
+                                value={confirmPassword}
+                                onChange={(e) => setConfirmPassword(e.target.value)}
                             />
+                            {error.confirmPassword && <p className="text-red-500 text-xs mt-1">{error.confirmPassword}</p>}
                         </div>
                         
                         <button 
