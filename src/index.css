@@ -14,6 +14,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -25,9 +26,6 @@ button {
   font-size: 0.8em;
   font-weight: 400;
   cursor: pointer;
-}
-button:hover {
-  border-color: #646cff;
 }
 button:focus,
 button:focus-visible {

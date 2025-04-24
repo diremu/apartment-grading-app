@@ -1,5 +1,7 @@
-import { Link } from 'react-router-dom'
-import {useState} from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { signup } from '../store/userSlice'
 
 export default function SignupCustomer() {
     const [name, setName] = useState("")
@@ -7,40 +9,54 @@ export default function SignupCustomer() {
     const [password, setPassword] = useState("")
     const [confirmPassword, setConfirmPassword] = useState("")
     const [error, setError] = useState({name: "", email: "", password: "", confirmPassword: ""})
+    
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
 
-    function handleSubmit(e){
+    function handleSubmit(e) {
         e.preventDefault();
         const newErrors = {
             name: "",
             email: "",
             password: "",
             confirmPassword: ""
-          };
-          if (name === "") {
+        };
+        if (name === "") {
             newErrors.name = "Name is required";
-          }
-          
-          if (email === "") {
+        }
+        
+        if (email === "") {
             newErrors.email = "Email is required";
-          } else if (!/\S+@\S+\.\S+/.test(email)) {
+        } else if (!/\S+@\S+\.\S+/.test(email)) {
             newErrors.email = "Email is invalid";
-          }
-          
-          if (password === "") {
+        }
+        
+        if (password === "") {
             newErrors.password = "Password is required";
-          } else if (password.length < 8) {
+        } else if (password.length < 8) {
             newErrors.password = "Password must be at least 8 characters";
-          }
-          if (password !== confirmPassword) {
+        }
+        
+        if (password !== confirmPassword) {
             newErrors.confirmPassword = "Passwords do not match";
-          }
-          setError(newErrors);
-          const hasErrors = Object.values(newErrors).some(error => error !== "");
-          
-          if (!hasErrors) {
-            console.log("Form is valid, submitting:", { name, email, password });
-          }
+        }
+        setError(newErrors);
+        const hasErrors = Object.values(newErrors).some(error => error !== "");
+        
+        if (!hasErrors) {
+            const newUser = {
+                id: Date.now(),
+                name,
+                email,
+                password,
+                role: 'customer',
+                createdAt: new Date().toISOString()
+            };
+            dispatch(signup(newUser));
+            navigate('/');
+        }
     }
+
     return (
         <div className="min-h-screen bg-[#f9fafb] flex flex-col">
             <div className="bg-[#4f46e5] text-white p-4">
@@ -58,12 +74,12 @@ export default function SignupCustomer() {
                             <input 
                                 type="text" 
                                 id="name" 
-                                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#a5b4fc]" 
+                                className={`w-full px-4 py-2 border ${error.name ? "border-red-500" : "border-gray-300"} rounded-md focus:outline-none focus:ring-2 focus:ring-[#a5b4fc]`}
                                 placeholder="John Doe"
-                                onChange={(e) => setName(e.target.value)}
                                 value={name}
+                                onChange={(e) => setName(e.target.value)}
                             />
-                            {error.name && <p className="text-red-500 text-sm">{error.name}</p>}
+                            {error.name && <p className="text-red-500 text-xs mt-1">{error.name}</p>}
                         </div>
                         
                         <div>
@@ -71,12 +87,12 @@ export default function SignupCustomer() {
                             <input 
                                 type="email" 
                                 id="email" 
-                                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#a5b4fc]" 
+                                className={`w-full px-4 py-2 border ${error.email ? "border-red-500" : "border-gray-300"} rounded-md focus:outline-none focus:ring-2 focus:ring-[#a5b4fc]`}
                                 placeholder="john@example.com"
+                                value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                value={email} 
                             />
-                            {error.email && <p className="text-red-500 text-sm">{error.email}</p>}
+                            {error.email && <p className="text-red-500 text-xs mt-1">{error.email}</p>}
                         </div>
                         
                         <div>
@@ -84,12 +100,12 @@ export default function SignupCustomer() {
                             <input 
                                 type="password" 
                                 id="password" 
-                                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#a5b4fc]" 
+                                className={`w-full px-4 py-2 border ${error.password ? "border-red-500" : "border-gray-300"} rounded-md focus:outline-none focus:ring-2 focus:ring-[#a5b4fc]`}
                                 placeholder="••••••••"
-                                onChange={(e) => setPassword(e.target.value)}
                                 value={password}
+                                onChange={(e) => setPassword(e.target.value)}
                             />
-                            {error.password && <p className="text-red-500 text-sm">{error.password}</p>}
+                            {error.password && <p className="text-red-500 text-xs mt-1">{error.password}</p>}
                         </div>
                         
                         <div>
@@ -97,12 +113,12 @@ export default function SignupCustomer() {
                             <input 
                                 type="password" 
                                 id="confirmPassword" 
-                                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#a5b4fc]" 
+                                className={`w-full px-4 py-2 border ${error.confirmPassword ? "border-red-500" : "border-gray-300"} rounded-md focus:outline-none focus:ring-2 focus:ring-[#a5b4fc]`}
                                 placeholder="••••••••"
+                                value={confirmPassword}
                                 onChange={(e) => setConfirmPassword(e.target.value)}
-                                value={confirmPassword} 
                             />
-                            {error.confirmPassword && <p className="text-red-500 text-sm">{error.confirmPassword}</p>}
+                            {error.confirmPassword && <p className="text-red-500 text-xs mt-1">{error.confirmPassword}</p>}
                         </div>
                         
                         <button 

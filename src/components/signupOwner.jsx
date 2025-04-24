@@ -1,14 +1,18 @@
-import { Link } from 'react-router-dom'
-import {useState} from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { signup } from '../store/userSlice'
 
 export default function SignupOwner() {
-
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [company, setCompany] = useState("")
     const [password, setPassword] = useState("")
     const [confirmPassword, setConfirmPassword] = useState("")
     const [error, setError] = useState({name: "", email: "", password: "", confirmPassword: ""})
+    
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -33,7 +37,7 @@ export default function SignupOwner() {
         } else if (password.length < 8) {
             newErrors.password = "Password must be at least 8 characters";
         }
-
+        
         if (password !== confirmPassword) {
             newErrors.confirmPassword = "Passwords do not match";
         }
@@ -41,7 +45,17 @@ export default function SignupOwner() {
         const hasErrors = Object.values(newErrors).some(error => error !== "");
         
         if (!hasErrors) {
-            console.log("submitted");
+            const newUser = {
+                id: Date.now(),
+                name,
+                email,
+                company,
+                password,
+                role: 'owner',
+                createdAt: new Date().toISOString()
+            };
+            dispatch(signup(newUser));
+            navigate('/');
         }
     }
 
