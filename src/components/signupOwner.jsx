@@ -46,7 +46,6 @@ export default function SignupOwner() {
         
         if (!hasErrors) {
             const newUser = {
-                id: Date.now(),
                 name,
                 email,
                 company,

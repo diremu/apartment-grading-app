@@ -2,7 +2,6 @@ import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 
 export default function Card(props) {
   const property = props.apartment || props;
-  console.log(property.users);
   return (
     <div className="bg-white rounded-lg shadow-md border border-gray-200 m-4 w-80 selection:bg-transparent">
       <div className="p-5">

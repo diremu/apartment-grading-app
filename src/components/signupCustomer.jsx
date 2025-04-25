@@ -45,7 +45,6 @@ export default function SignupCustomer() {
         
         if (!hasErrors) {
             const newUser = {
-                id: Date.now(),
                 name,
                 email,
                 password,

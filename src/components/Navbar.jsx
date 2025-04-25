@@ -7,6 +7,7 @@ export default function Navbar() {
     const loggedIn = useSelector((state) => state.user.isLoggedIn)
     const user = useSelector((state) => state.user.users)
     const dispatch = useDispatch()
+    console.log(user)
     return (
         <div className="bg-[#4f46e5] text-white">
             <nav className="flex items-center mx-2 justify-between">
@@ -17,7 +18,7 @@ export default function Navbar() {
                     {!loggedIn ? (<div className="flex gap-4 border-[#f9fafb] border border-solid rounded px-3 py-1">
                         <li><button className="font-light text-[18px]" onClick={() => navigate("/signup")}>Sign up</button></li>
                         <span>/</span>
-                        <li><button className="  text-[18px]">Log In</button></li>
+                        <li><button className="text-[18px]" onClick={()=> navigate("/login")}>Log In</button></li>
                     </div>
                     ): (
                         <div>
