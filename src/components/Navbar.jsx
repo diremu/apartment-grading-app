@@ -5,7 +5,7 @@ import { logout } from '../store/userSlice.js'
 export default function Navbar() {
     const navigate = useNavigate()
     const loggedIn = useSelector((state) => state.user.isLoggedIn)
-    const user = useSelector((state) => state.user.users)
+    const user = useSelector((state) => state.user.user)
     const dispatch = useDispatch()
     console.log(user)
     return (

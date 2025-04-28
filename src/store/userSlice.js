@@ -44,7 +44,6 @@ export const userSlice = createSlice({
         console.error("Error saving userList to sessionStorage:", error);
       }
     },
-    // Add a reset action to clear user data if needed
     resetUserData: (state) => {
       state.users = [];
       sessionStorage.removeItem("userList");
