@@ -17,7 +17,7 @@ function App() {
       <Route path="/signup/customer" element={<SignupCustomer />} />
       <Route path="/login" element={<Login />} />
       <Route path="/properties" element={<PropertyCatalogue />}>
-        <Route path=":pid" element={<PropertyViewer />} />
+        <Route path=":property/:pid" element={<PropertyViewer />} />
       </Route>
     </Routes>
   );

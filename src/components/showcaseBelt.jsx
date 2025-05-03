@@ -6,9 +6,10 @@ import {
   CarouselPrevious,
 } from "./ui/carousel";
 import Card from "./card";
+import { useNavigate } from "react-router-dom";
 
-export default function ShowcaseBelt(properties) {
-  const propertiess = properties.properties
+export default function ShowcaseBelt({properties, type}) {
+  const navigate = useNavigate();
   return (
     <Carousel opts={{
         loop: true,
@@ -16,10 +17,10 @@ export default function ShowcaseBelt(properties) {
         watchDrag: false
     }} className="w-[80%]">
       <CarouselContent>
-        { propertiess.map((property, index) => (
-              <CarouselItem key={index} className="basis-1/3">
+        { properties.map((property, index) => (
+              <CarouselItem key={index} className="basis-1/3" onClick={() => navigate(`/properties/${type}/${index}`)}>
                 <div>
-                  <Card apartment={property} />
+                  <Card apartment={property}  />
                 </div>
               </CarouselItem>
             ))}

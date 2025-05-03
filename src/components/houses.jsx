@@ -8,7 +8,7 @@ export default function Houses() {
             <h2 className="text-3xl font-semibold bg-[url('/assets/images/houses-title.jpg')] bg-cover bg-center py-10">Houses</h2>
             <p className="italic text-[16px]">Our Comfortable and Modern Houses</p>
             <div className="flex flex-wrap justify-center">
-                <ShowcaseBelt properties={houseList} />
+                <ShowcaseBelt properties={houseList} type="houses" />
             </div>
         </div>
     )
