@@ -21,19 +21,16 @@ export default function PropertyViewer() {
         return <div className="container mx-auto p-6 text-center">Invalid property ID</div>
     }
     const property = Properties[type][propertyId]
-    
-    // Create review data from property users and ratings
     const [reviewData, setReviewData] = useState([])
     
     useEffect(() => {
-        // Combine users and ratings into review objects
         if (property.users && property.ratings) {
             const reviews = property.users.map((user, index) => ({
                 name: user,
                 rating: property.ratings[index] || "✯✯✯",
                 location: property.address,
-                duration: "1 month",
-                review: `Review for ${property.name}`,
+                // duration: "~1 month",
+                // review: `Review for ${property.name}`,
             }))
             setReviewData(reviews)
         }
@@ -41,7 +38,6 @@ export default function PropertyViewer() {
 
     return (
         <div className="bg-[#f9fafb] min-h-screen pb-8">
-            {/* Property Header */}
             <div className="bg-[#a5b4fc] text-white p-6 mb-6">
                 <div className="container mx-auto">
                     <h1 className="text-3xl font-bold mb-2">{property.name}</h1>
@@ -53,7 +49,6 @@ export default function PropertyViewer() {
             </div>
             
             <div className="container mx-auto px-4">
-                {/* Main Image Carousel */}
                 <div className="mb-8">
                     {property.images && (
                         <Carousel 
@@ -81,7 +76,6 @@ export default function PropertyViewer() {
                     )}
                 </div>
                 
-                {/* Property Details */}
                 <div className="mb-8 bg-white p-6 rounded-lg shadow-md">
                     <h2 className="text-xl font-bold mb-4 border-b-2 border-[#a5b4fc] pb-2">{type.charAt(0).toUpperCase() + type.slice(1, -1)} Details</h2>
                     <div className="grid grid-cols-2 gap-4">
@@ -90,7 +84,6 @@ export default function PropertyViewer() {
                     </div>
                 </div>
                 
-                {/* Reviews */}
                 <div className="mb-8">
                     <h2 className="text-xl font-bold mb-4 border-b-2 border-[#a5b4fc] pb-2">Guest Reviews</h2>
                     
@@ -116,7 +109,6 @@ export default function PropertyViewer() {
                     )}
                 </div>
                 
-                {/* Simple CTA */}
                 <div className="bg-[#a5b4fc] text-white p-6 rounded-lg text-center">
                     <h3 className="font-bold text-xl mb-2">Interested in this property?</h3>
                     <button className="bg-white text-[#a5b4fc] px-4 py-2 rounded-lg font-semibold hover:bg-gray-100">
