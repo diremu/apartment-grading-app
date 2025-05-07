@@ -13,7 +13,6 @@ export default function Login() {
     const users = useSelector((state) => state.user.users);
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    let linkup = false;
 
     function onSubmit(e) {
         e.preventDefault();
@@ -38,11 +37,11 @@ export default function Login() {
         
         if (!hasErrors) {
             const isExisting = users.filter((obj) => obj.email === email)
+            console.log(isExisting)
             if (isExisting) {
-                if (isExisting.password === password) {
+                if (isExisting[0].password === password) {
                     dispatch(login({
-                        email,
-                        password
+                        user: "Diremu"
                     }))
                     navigate("/")
                 }
@@ -82,6 +81,7 @@ export default function Login() {
                                 onChange={(e) => setEmail(e.target.value)}
                                 className="w-full"
                             />
+                            {error.email && <p className="text-red-500 text-xs mt-1">{error.email}</p>}
                         </div>
                         
                         <div className="space-y-2">
@@ -97,6 +97,7 @@ export default function Login() {
                                 onChange={(e) => setPassword(e.target.value)}
                                 className="w-full"
                             />
+                            {error.password && <p className="text-red-500 text-xs mt-1">{error.password}</p>}
                         </div>
                         
                         <Button 

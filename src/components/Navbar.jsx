@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom'
 import {useSelector, useDispatch} from 'react-redux'
 import { logout } from '../store/userSlice.js'
+import {Button } from './ui/button.jsx'
+import { Popover, PopoverTrigger, PopoverContent } from './ui/popover.jsx'
 
 export default function Navbar() {
     const navigate = useNavigate()
@@ -8,6 +10,9 @@ export default function Navbar() {
     const user = useSelector((state) => state.user.user)
     const dispatch = useDispatch()
     console.log(user)
+    console.log(loggedIn)
+    const users = useSelector((state) => state.user.users)
+    console.log(users)
     return (
         <div className="bg-[#4f46e5] text-white">
             <nav className="flex items-center mx-2 justify-between">
@@ -22,8 +27,22 @@ export default function Navbar() {
                     </div>
                     ): (
                         <div>
-                            <li><button onClick={dispatch(logout())}>Log Out</button></li>
-                            <li><span>{users[0]}</span></li>
+                            <li><button onClick={()=> dispatch(logout())}>Log Out</button></li>
+                            <li><span>{user[0]}</span></li>
+                            <li>
+                                <Popover>
+                                    <PopoverTrigger asChild>
+                                        <Button variant="outline">{user[0]}</Button>
+                                    </PopoverTrigger>
+                                    <PopoverContent>
+                                        <div className="grid gap-4">
+                                            <div>User's Name</div>
+                                            <div>Manage User Reviews</div>
+                                            <div>Log Out</div>
+                                        </div>
+                                    </PopoverContent>
+                                </Popover>
+                            </li>
                         </div>
                     )}
                 </ul>
