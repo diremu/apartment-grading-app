@@ -27,12 +27,12 @@ export default function Card(props) {
           {property.avgRating}
         </p>
         <div className="pt-3 border-t border-gray-100 flex items-center">
-          <div className="bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center text-gray-700 font-medium">
+          {/* <div className="bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center text-gray-700 font-medium">
             {property.users ? property.users[0].charAt(0) : "?"}
           </div>
           <span className="ml-2 text-sm text-gray-600 text-wrap">
             Reviewed by {property.users[0]} +{property.users.length - 1} others
-          </span>
+          </span> */}
           {/* since i dont have a full solution as of now, let me use bandages to cover up for now */}
         </div>
       </div>

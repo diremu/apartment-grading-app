@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
 import { Properties } from "../properties"
+import {Reviews} from '../reviews.js'
 import {
   Carousel,
   CarouselContent,
@@ -9,6 +10,7 @@ import {
 } from "../ui/carousel"
 import ReviewCard from "../ReviewCard"
 import { useState, useEffect } from "react"
+import {useSelector} from 'react-redux'
 
 export default function PropertyViewer() {
     const params = useParams()
@@ -22,6 +24,8 @@ export default function PropertyViewer() {
     }
     const property = Properties[type][propertyId]
     const [reviewData, setReviewData] = useState([])
+    const propertyReviews = Reviews.filter((item) => item.location === property.name)
+    console.log(propertyReviews)
     
     useEffect(() => {
         if (property.users && property.ratings) {
@@ -87,7 +91,7 @@ export default function PropertyViewer() {
                 <div className="mb-8">
                     <h2 className="text-xl font-bold mb-4 border-b-2 border-[#a5b4fc] pb-2">Guest Reviews</h2>
                     
-                    {reviewData.length > 0 ? (
+                    {propertyReviews.length > 0 ? (
                         <Carousel 
                             opts={{
                                 loop: true,
@@ -95,7 +99,7 @@ export default function PropertyViewer() {
                             }} 
                             className="w-full">
                             <CarouselContent>
-                                {reviewData.map((review, index) => (
+                                {propertyReviews.map((review, index) => (
                                     <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                                         <ReviewCard review={review} />
                                     </CarouselItem>
@@ -108,7 +112,7 @@ export default function PropertyViewer() {
                         <p className="text-center p-4 bg-white rounded-lg">No reviews available</p>
                     )}
                 </div>
-                
+                {}
                 <div className="bg-[#a5b4fc] text-white p-6 rounded-lg text-center">
                     <h3 className="font-bold text-xl mb-2">Interested in this property?</h3>
                     <button className="bg-white text-[#a5b4fc] px-4 py-2 rounded-lg font-semibold hover:bg-gray-100">

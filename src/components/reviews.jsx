@@ -1,7 +1,8 @@
 import ReviewBelt from "./ReviewBelt";
-import { Reviews as reviews } from "./reviews.js";
+import { Reviews, Reviews as reviews } from "./reviews.js";
 
 export default function ReviewsComponent() {
+    const reviews = Reviews.slice(0,5)
     return (
         <div className="my-10">
             <h2 className="text-3xl font-bold text-center mb-6 bg-[url('src/assets/images/review-title.jpg')] bg-cover bg-center py-10">

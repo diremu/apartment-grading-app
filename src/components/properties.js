@@ -1,10 +1,10 @@
 export const Properties = {
     "apartments": [
-        {"name":"Cozy Apartment", "address": "123 Matsutake Street", "avgRating": "✯✯✯✯", "users": ["John Husky","Wayne Romano","Lucas De Gravo","Marcus Zomeny"],
-            "ratings": ["✯✯✯✯✯","✯✯✯","✯✯✯✯","✯✯✯✯"], "images": ["/assets/images/apartment-1.jpg","/assets/images/apartment-8.jpg"]
+        {"name":"Cozy Apartment", "address": "123 Matsutake Street", "avgRating": "✯✯✯✯", 
+             "images": ["/assets/images/apartment-1.jpg","/assets/images/apartment-8.jpg"]
         },
-        {"name":"Urban Loft", "address": "456 Downtown Avenue", "avgRating": "✯✯✯✯✯", "users": ["Sarah Miller","Emma Davis","Michael Johnson"],
-            "ratings": ["✯✯✯✯✯","✯✯✯✯✯","✯✯✯✯✯"], "images": ["/assets/images/apartment-3.jpg","/assets/images/apartment-4.jpg"]
+        {"name":"Urban Loft", "address": "456 Downtown Avenue", "avgRating": "✯✯✯✯✯",
+             "images": ["/assets/images/apartment-3.jpg","/assets/images/apartment-4.jpg"]
         },
         {"name":"Parkside Studio", "address": "789 Green Park Road", "avgRating": "✯✯✯", "users": ["James Wilson","Olivia Martinez","Daniel Thompson"],
             "ratings": ["✯✯✯","✯✯✯✯","✯✯✯"], "images": ["/assets/images/apartment-2.jpg","/assets/images/apartment-5.jpg"]

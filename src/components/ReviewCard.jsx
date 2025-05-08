@@ -12,12 +12,9 @@ export default function ReviewCard({ review }) {
         <h3 className="font-bold text-xl text-gray-800 mb-2 text-center">
           {review.name}
         </h3>
-        {/* <p className="text-gray-500 mb-4 text-center">
-          {review.location} • {review.duration} stay
-        </p>
         <div className="mt-4 bg-gray-50 p-4 rounded-lg">
           <p className="text-gray-700 italic">"{review.review}"</p>
-        </div> */}
+        </div>
       </div>
     </div>
   );

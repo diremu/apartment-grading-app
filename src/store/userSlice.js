@@ -11,23 +11,26 @@ try {
       sessionStorage.removeItem("userList");
     }
   }
-  // const formerUser = sessionStorage.getItem("currentUser")
-  // if (typeof formerUser !== string) {
-  //   sessionStorage.removeItem("currentUser")
-  // } else {
-  //   currentUser = sessionStorage.getItem("currentUser")
-  // }
+ 
+  currentUser = JSON.parse(sessionStorage.getItem("currentUser")).name
+  const formerUser = sessionStorage.getItem("currentUser")
+  if (typeof formerUser !== String || formerUser === null) {
+    sessionStorage.removeItem("currentUser")
+    currentUser = ""
+  } else {
+    currentUser = sessionStorage.getItem("currentUser")
+  }
 } catch (error) {
   console.error( error.message);
   sessionStorage.removeItem("userList");
   sessionStorage.removeItem("currentUser")
 }
 
-currentUser = sessionStorage.getItem("currentUser")
 
+console.log(currentUser)
 const initialState = {
   user: currentUser,
-  isLoggedIn: false,
+  isLoggedIn: currentUser ? true : false,
   users: users
 };
 

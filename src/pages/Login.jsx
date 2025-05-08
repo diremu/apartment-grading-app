@@ -1,9 +1,8 @@
-import { useSelector } from 'react-redux';
 import { useState } from 'react';
 import { Input } from '../components/ui/input';
 import { Button } from '../components/ui/button';
 import { Link, useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../store/userSlice';
 
 export default function Login() {
@@ -41,7 +40,7 @@ export default function Login() {
             if (isExisting) {
                 if (isExisting[0].password === password) {
                     dispatch(login({
-                        user: "Diremu"
+                        user: isExisting.name
                     }))
                     navigate("/")
                 }

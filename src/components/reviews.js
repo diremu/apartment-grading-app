@@ -34,5 +34,25 @@ export const Reviews = [
         'review': "Such a comfortable and welcoming space. Everything was exactly as described",
         'duration': "4 days",
         'location': "Comfort Zone",
-    }
+    },{
+        'name': "Muhammed Jakhtar",
+        'review': "The apartment was cozy and well-furnished. I loved the location! I would definitely come again",
+        'duration': "4 days",
+        'location': "Cozy Apartment",
+    },{
+        'name': "Obinna Ukechukwu",
+        'review': "The apartment was cozy and well-furnished. I loved the location! I would definitely come again",
+        'duration': "4 days",
+        'location': "Cozy Apartment",
+    },{
+        'name': "David Kingston",
+        'review': "The apartment was cozy and well-furnished. I loved the location! I would definitely come again",
+        'duration': "4 days",
+        'location': "Cozy Apartment",
+    },{
+        'name': "Mauli McKraig",
+        'review': "The apartment was cozy and well-furnished. I loved the location! I would definitely come again",
+        'duration': "4 days",
+        'location': "Cozy Apartment",
+    },
 ]
