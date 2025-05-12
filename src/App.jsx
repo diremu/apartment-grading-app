@@ -6,6 +6,7 @@ import SignupCustomer from "./components/signupCustomer";
 import Login from "./pages/Login";
 import PropertyViewer from "./components/properties/propertyViewer";
 import PropertyCatalogue from "./pages/PropertyCatalogue";
+import PropertiesPage from "./pages/Properties";
 import "./App.css";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path="/signup/customer" element={<SignupCustomer />} />
       <Route path="/login" element={<Login />} />
       <Route path="/properties" element={<PropertyCatalogue />}>
+        <Route index element={<PropertiesPage />} />
         <Route path=":property/:pid" element={<PropertyViewer />} />
       </Route>
     </Routes>
