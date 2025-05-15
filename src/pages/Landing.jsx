@@ -10,15 +10,15 @@ export default function Landing() {
       <Navbar />
       {/* //secondary - [#a5b4fc] */}
       <div className=" py-4 flex flex-col items-center justify-center mt-20">
-        <div className="text-center">
-          <h1 className="text-4xl mb-8">
+        <div className="text-center px-3">
+          <h1 className="text-[25px] md:text-4xl mb-8">
             Find the <span className="font-bold">Perfect Place</span> <br />{" "}
-            —Backed by{" "}
+            — Backed by{" "}
             <span className="underline font-bold">Real Reviews</span>,{" "}
             <br /> Not{" "}
             <span className=" decoration-wavy underline font-bold">Guesswork</span>
           </h1>
-          <p className="text-center text-wrap text-[16px] font-[500]">
+          <p className="text-center text-wrap text-[14px] md:text-[16px] font-[500]">
             Whether it's an overnight stay, a weekend event, or a life-changing
             decision, <br /> you can rely on us to consistently deliver unparalleled
             quality.

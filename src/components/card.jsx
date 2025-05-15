@@ -11,7 +11,7 @@ export default function Card(props) {
               <CarouselItem key={index} className="w-full h-48">
                 <img
                   src={image}
-                  alt={`Property ${index + 1}`}
+                  alt={`${property.name} ${index + 1}`}
                   className="object-cover w-full h-full rounded-lg"
                 />
               </CarouselItem>
