@@ -1,6 +1,6 @@
 import Apartments from "../components/apartments";
 import Condos from "../components/condos";
-// import Hotels from "../components/hotels";
+import Hotels from "../components/hotels";
 import Houses from "../components/houses.jsx";
 
 function PropertiesPage() {
@@ -17,28 +17,24 @@ function PropertiesPage() {
       </div>
       <div id="body">
         <div>
-          <p>Apartments</p>
           <div>
             <Apartments />
           </div>
         </div>
         <div>
-          <p>Condos</p>
           <div>
             <Condos />
           </div>
         </div>
         <div>
-          <p>Houses</p>
           <div>
             <Houses />
           </div>
         </div>
         <div>
-          {/* <p>Hotels</p>
           <div>
             <Hotels />
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
