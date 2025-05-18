@@ -40,6 +40,11 @@ export default function Landing() {
         <Apartments />
         <Houses />
       </div>
+      <div className="mt-10 px-4">
+        <h4 className="text-2xl font-bold my-3">Are you a property owner looking for better visibility?</h4>
+        <p className="my-3 ">Well you've come to the right place! A place to collect feedback and opportunites for you!</p>
+        <button><span>Join us today😊</span></button>
+      </div>
       <Reviews />
       <Footer />
     </div>

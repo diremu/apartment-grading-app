@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function ReviewCard({ review }) {
   return (
     <div className="bg-white rounded-lg shadow-md border border-gray-200 m-4 w-full selection:bg-transparent">
@@ -12,7 +10,7 @@ export default function ReviewCard({ review }) {
         <h3 className="font-bold text-xl text-gray-800 mb-2 text-center">
           {review.name}
         </h3>
-        <div className="mt-4 bg-gray-50 p-4 rounded-lg">
+        <div className="mt-4 bg-gray-200 p-4 rounded-lg">
           <p className="text-gray-700 italic">"{review.review}"</p>
         </div>
       </div>

@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="flex flex-wrap justify-between">
           {/* Company Info */}
           <div className="w-full md:w-1/4 mb-6 md:mb-0">
-            <h3 className="text-xl font-bold mb-3">Cozy Ratings</h3>
+            <h3 className="text-2xl font-bold mb-3">Cozy Ratings</h3>
             <p className="text-sm">
               Finding you the perfect place with honest reviews and reliable ratings.
             </p>
@@ -33,7 +33,7 @@ export default function Footer() {
           {/* Social Media */}
           <div className="w-full md:w-1/4">
             <h3 className="text-xl font-bold mb-3">Follow Us</h3>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 justify-center">
               <a href="#" className="hover:text-[#a5b4fc]">
                 <span className="sr-only">Facebook</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
