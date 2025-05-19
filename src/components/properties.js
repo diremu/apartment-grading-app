@@ -27,16 +27,16 @@ export const Properties = {
     ],
     "condos": [
         {"name":"Luxury Highrise Condo", "address": "111 Skyview Lane", "avgRating": "✯✯✯✯✯", "users": ["Noah Anderson","Isabella Wright","Ethan Clark"],
-            "ratings": ["✯✯✯✯✯","✯✯✯✯✯","✯✯✯✯✯"]
+            "ratings": ["✯✯✯✯✯","✯✯✯✯✯","✯✯✯✯✯"], "images" : ["/assets/images/condo-1.jpg","/assets/images/condo-2.jpg"]
         },
         {"name":"Beachfront Condo", "address": "222 Coastal Highway", "avgRating": "✯✯✯✯", "users": ["Isabella Thomas","Mason Walker","Sophia Robinson"],
-            "ratings": ["✯✯✯✯","✯✯✯✯✯","✯✯✯"]
+            "ratings": ["✯✯✯✯","✯✯✯✯✯","✯✯✯"], "images" : ["/assets/images/condo-3.jpg", "/assets/images/condo-4.jpg"] 
         },
         {"name":"Mountain View Condo", "address": "333 Alpine Drive", "avgRating": "✯✯✯✯✯", "users": ["Lucas Wright","Ava Martinez","Logan Baker"],
-            "ratings": ["✯✯✯✯✯","✯✯✯✯","✯✯✯✯✯"]
+            "ratings": ["✯✯✯✯✯","✯✯✯✯","✯✯✯✯✯"], "images": ["/assets/images/condo-5.jpg", "/assets/images/condo-6.jpg"]
         },
         {"name":"Downtown Penthouse", "address": "444 Urban Center", "avgRating": "✯✯✯✯", "users": ["Charlotte Lee","Benjamin Young","Mia Scott","Jacob Hill"],
-            "ratings": ["✯✯✯✯","✯✯✯✯","✯✯✯","✯✯✯✯✯"]
+            "ratings": ["✯✯✯✯","✯✯✯✯","✯✯✯","✯✯✯✯✯"], "images" : ["/assets/images/condo-7.jpg", "/assets/images/condo-8.jpg"]
         }
     ],
     "houses": [
@@ -67,16 +67,16 @@ export const Properties = {
     ],
     "hotels": [
         {"name":"Grand Plaza Hotel", "address": "123 Luxury Boulevard", "avgRating": "✯✯✯✯✯", "users": ["Mason Clark","Ella Wright","Carter Lewis","Lily Walker"],
-            "ratings": ["✯✯✯✯✯","✯✯✯✯✯","✯✯✯✯","✯✯✯✯✯"]
+            "ratings": ["✯✯✯✯✯","✯✯✯✯✯","✯✯✯✯","✯✯✯✯✯"], "images" : ["/assets/images/hotel-1.jpg", "/assets/images/hotel-2.jpg"]
         },
         {"name":"Seaside Resort", "address": "456 Ocean View Drive", "avgRating": "✯✯✯✯", "users": ["Ella Wright","Gabriel Rodriguez","Grace Lee"],
-            "ratings": ["✯✯✯✯","✯✯✯✯","✯✯✯✯"]
+            "ratings": ["✯✯✯✯","✯✯✯✯","✯✯✯✯"], "images": ["/assets/images/hotel-3.jpg", "/assets/images/hotel-4.jpg"]
         },
         {"name":"Mountain Lodge", "address": "789 Summit Trail", "avgRating": "✯✯✯✯", "users": ["Carter Lewis","Chloe Hall","Owen Young"],
-            "ratings": ["✯✯✯✯","✯✯✯","✯✯✯✯✯"]
+            "ratings": ["✯✯✯✯","✯✯✯","✯✯✯✯✯"], "images": ["/assets/images/hotel-5.jpg", "/assets/images/hotel-6.jpg"]
         },
         {"name":"Urban Boutique Hotel", "address": "101 Fashion Street", "avgRating": "✯✯✯✯✯", "users": ["Lily Walker","Wyatt Harris","Zoey Scott","Lucas Evans"],
-            "ratings": ["✯✯✯","✯✯✯✯✯","✯✯✯✯","✯✯✯✯✯"]
+            "ratings": ["✯✯✯","✯✯✯✯✯","✯✯✯✯","✯✯✯✯✯"], "images": ["/assets/images/hotel-7.jpg", "/assets/images/hotel-8.jpg"]
         }
     ]
 }

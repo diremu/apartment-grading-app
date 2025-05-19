@@ -6,12 +6,12 @@ import Houses from "../components/houses.jsx";
 function PropertiesPage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-[#f9fafb] px-4 py-8">
-      <div className="w-full max-w-4xl bg-white rounded-lg shadow-lg p-6 md:p-10 flex flex-col items-center mx-auto">
+      <div className="w-full max-w-4xl  rounded-lg bg-white p-6 md:p-10 flex flex-col items-center mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
           Properties
         </h2>
         <div id="header" className="text-center">
-          <h2 className="text-3xl">
+          <h2 className="text-3xl font-bold">
             Get a place to stay and feel at ease no matter where you go
           </h2>
           <p className="pt-3">
@@ -21,16 +21,16 @@ function PropertiesPage() {
           </p>
         </div>
         <div id="body" className="w-full mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="flex justify-center items-center w-full">
+          <div className="flex justify-center items-center w-full my-2">
             <Apartments />
           </div>
-          <div className="flex justify-center items-center w-full">
+          <div className="flex justify-center items-center w-full my-2">
             <Condos />
           </div>
-          <div className="flex justify-center items-center w-full">
+          <div className="flex justify-center items-center w-full my-2">
             <Houses />
           </div>
-          <div className="flex justify-center items-center w-full">
+          <div className="flex justify-center items-center w-full my-2">
             <Hotels />
           </div>
         </div>
