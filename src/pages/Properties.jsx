@@ -20,7 +20,7 @@ function PropertiesPage() {
             from
           </p>
         </div>
-        <div id="body" className="w-full mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div id="body" className="w-full mt-6 grid grid-cols-1 gap-6">
           <div className="flex justify-center items-center w-full my-2">
             <Apartments />
           </div>
