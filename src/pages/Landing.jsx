@@ -3,8 +3,10 @@ import Apartments from "../components/apartments";
 import Houses from "../components/houses";
 import Reviews from "../components/reviews.jsx";
 import Footer from "../components/Footer";
+import { useNavigate } from "react-router-dom";
 
 export default function Landing() {
+  const navigate = useNavigate();
   return (
     <div className="bg-[#f9fafb] min-h-screen text-[#111827]">
       <Navbar />
@@ -40,10 +42,10 @@ export default function Landing() {
         <Apartments />
         <Houses />
       </div>
-      <div className="mt-10 px-4">
-        <h4 className="text-2xl font-bold my-3">Are you a property owner looking for better visibility?</h4>
+      <div className="mt-10 w-[90%] mx-auto px-4 py-6 bg-[#6f6acc] text-white rounded-lg shadow-lg text-center">
+        <h4 className="text-3xl font-bold my-3">Are you a property owner looking for better visibility?</h4>
         <p className="my-3 ">Well you've come to the right place! A place to collect feedback and opportunites for you!</p>
-        <button><span>Join us today😊</span></button>
+        <button className="bg-[#fff] text-black p-4 rounded-md" onClick={() => navigate('/signup/owner')}><span className="text-[14px] font-semibold">Join us today</span></button>
       </div>
       <Reviews />
       <Footer />
